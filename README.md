@@ -68,11 +68,22 @@ Helical Insight connects to virtually any modern data source through native conn
 | Apache Hive | Excel | Oracle Database | Apache Hive | Firebird SQL |
 | Presto | Google Sheets | SQL Server | YugabyteDB | Informix |
 | Trino | JSON | SQL Server (Legacy) | Snowflake | Custom JDBC Driver |
+|  |  |  | MongoDB |  |
 | Snowflake | Parquet | IBM DB2 |  |  |
 | Teradata | TSV | SAP HANA |  |  |
 |  | Google Cloud Storage | SQLite |  |  |
 
 ![Introduction](docs/supported_datasources.png)
+### MongoDB JDBC
+
+MongoDB can be configured as a JDBC datasource using the MongoDB JDBC driver.
+
+- **Driver class:** `com.mongodb.jdbc.MongoDriver`
+- **JDBC URL:** `jdbc:mongodb://<host>:<port>/<database>`
+- **Default local host:** `localhost`
+- **Default MongoDB port:** `27017`
+
+> **Note:** MongoDB JDBC Driver 3.0.8 requires MongoDB Enterprise or Atlas Data Federation. MongoDB Community Edition is not supported by this JDBC driver.
 
 # Helical Insight Comparison with Modern Open Source BI Tools
 
@@ -411,3 +422,4 @@ Helical Insight provides everything you need in one powerful platform.
 - YouTube: https://www.youtube.com/@HelicalInsight
 - Need help: support@helicalinsight.com
 - Report Issues: [GitHub Issues](https://github.com/helicalinsight/helicalinsight/issues)
+
